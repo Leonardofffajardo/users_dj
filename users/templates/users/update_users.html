@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-x">
+            <h1 class="cell">
+                Update your details here
+            </h1>
+            <div class="cell">
+                <form class="grid-x" method="POST"> {% csrf_token %}
+                    <div class="large-6">
+                        <label>Nombres:
+                            {{ form.username }}
+                        </label>
+                    </div>
+                    <div class="large-6">
+                        <label>Email:
+                            {{ form.email }}
+                        </label>
+                    </div>
+                    <div class="large-6">
+                        <label>Nombre:
+                            {{ form.name }}
+                        </label>
+                    </div>
+                    <div class="large-6">
+                        <label>Apellido:
+                            {{ form.surname }}
+                        </label>
+                    </div>
+                    <div class="large-6">
+                        <label>Género:
+                            {{ form.gender }}
+                        </label>
+                    </div>
+                    <div class="cell">
+                        <button type="submit" class="success button">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
